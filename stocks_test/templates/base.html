@@ -1,0 +1,34 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'inc/_links.html' %}
+    
+    {% block links %}{% endblock links %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+        <!-- header here -->
+        {% endblock header %}
+    </header>
+
+    <main>
+        {% block main %}
+        <!-- main here -->
+        {% endblock main %}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <!-- footer here -->
+        {% endblock footer %}
+    </footer>
+</body>
+</html>
